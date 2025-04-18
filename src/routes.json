@@ -1,30 +1,63 @@
 {
   "$schema": "https://json.openmrs.org/routes.schema.json",
   "backendDependencies": {
-    "fhir2": ">=1.2",
-    "webservices.rest": "^2.24.0"
+    "webservices.rest": ">=2.24.0"
   },
-  "extensions": [
-    {
-      "name": "Red box",
-      "component": "redBox",
-      "slot": "Boxes"
-    },
-    {
-      "name": "Blue box",
-      "component": "blueBox",
-      "slot": "Boxes"
-    },
-        {
-      "name": "Brand box",
-      "component": "blueBox",
-      "slot": "Boxes"
-    }
-  ],
   "pages": [
     {
       "component": "root",
-      "route": "root"
+      "route": "login",
+      "online": true,
+      "offline": true
+    },
+    {
+      "component": "root",
+      "route": "logout",
+      "online": true,
+      "offline": true
+    },
+    {
+      "component": "root",
+      "route": "change-password",
+      "online": true,
+      "offline": true
+    }
+  ],
+  "extensions": [
+    {
+      "name": "location-picker",
+      "slot": "location-picker",
+      "component": "locationPicker",
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "logout-button",
+      "slot": "user-panel-bottom-slot",
+      "component": "logoutButton",
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "password-changer",
+      "slot": "user-panel-slot",
+      "component": "changePasswordLink",
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "location-changer",
+      "slot": "top-nav-info-slot",
+      "component": "changeLocationLink",
+      "online": true,
+      "offline": true,
+      "order": 1
+    }
+  ],
+  "modals": [
+    {
+      "name": "change-password-modal",
+      "component": "changePasswordModal"
     }
   ]
 }

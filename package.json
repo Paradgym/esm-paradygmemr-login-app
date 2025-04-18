@@ -1,9 +1,9 @@
 {
-  "name": "@openmrs/esm-template-app",
+  "name": "@openmrs/esm-login-app",
   "version": "4.0.0",
   "license": "MPL-2.0",
-  "description": "An OpenMRS seed application for building microfrontends",
-  "browser": "dist/openmrs-esm-template-app.js",
+  "description": "An esm paradygmemr login app that provides a login page, logout page, and change password page.",
+  "browser": "dist/openmrs-esm-login-app.js",
   "main": "src/index.ts",
   "source": true,
   "scripts": {
@@ -30,18 +30,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openmrs/openmrs-esm-template-app.git"
+    "url": "git+https://github.com/Paradgym/esm-paradygmemr-login-app.git"
   },
-  "homepage": "https://github.com/openmrs/openmrs-esm-template-app#readme",
+  "homepage": "https://github.com/Paradgym/esm-paradygmemr-login-app#readme",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/openmrs/openmrs-esm-template-app/issues"
+    "url": "https://github.com/Paradgym/esm-paradygmemr-login-app/issues"
   },
   "dependencies": {
     "@carbon/react": "^1.76.0",
-    "lodash-es": "^4.17.21"
+    "@hookform/resolvers": "^5.0.1",
+    "@openmrs/esm-api": "^6.2.0",
+    "lodash-es": "^4.17.21",
+    "react-hook-form": "^7.55.0",
+    "zod": "^3.24.3"
   },
   "peerDependencies": {
     "@openmrs/esm-framework": "*",
@@ -52,7 +56,7 @@
     "rxjs": "6.x"
   },
   "devDependencies": {
-    "@openmrs/esm-framework": "next",
+    "@openmrs/esm-framework": "^6.2.1-pre.2860",
     "@openmrs/esm-styleguide": "next",
     "@playwright/test": "^1.42.1",
     "@swc/cli": "^0.3.12",
@@ -85,7 +89,7 @@
     "jest-cli": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.2",
-    "openmrs": "next",
+    "openmrs": "^6.2.1-pre.2860",
     "prettier": "^3.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
